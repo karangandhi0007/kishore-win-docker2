@@ -58,4 +58,5 @@ CMD ["python"]
 # invoke python script to change env variables
 COPY read.py C:\kishore\kishore-win-docker2
 COPY test1.json C:\kishore\kishore-win-docker2
-CMD ["read.py", "-f", "test1.json"]
+WORKDIR C:\kishore\kishore-win-docker2
+CMD ["python", "read.py", "-f", "test1.json"]
