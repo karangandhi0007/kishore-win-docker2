@@ -55,3 +55,7 @@ RUN Write-Host ('Installing pip=={0} ...' -f $env:PYTHON_PIP_VERSION); \
 RUN pip install --no-cache-dir virtualenv
 
 CMD ["python"]
+# invoke python script to change env variables
+COPY read.py
+COPY test1.json
+CMD ["read.py", "-f", "test1.json"]
