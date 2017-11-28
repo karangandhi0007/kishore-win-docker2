@@ -56,6 +56,6 @@ RUN pip install --no-cache-dir virtualenv
 
 CMD ["python"]
 # invoke python script to change env variables
-COPY read.py
-COPY test1.json
+COPY read.py C:\kishore\kishore-win-docker2
+COPY test1.json C:\kishore\kishore-win-docker2
 CMD ["read.py", "-f", "test1.json"]
